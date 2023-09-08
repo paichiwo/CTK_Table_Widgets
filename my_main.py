@@ -3,31 +3,28 @@ from faker import Faker
 from ctktableview.my_tableview import CTkTableView
 
 
-def fakeit():
-
-    data = []
+def fakeit(table):
     f = Faker()
-    for n in range(10):
-        data.append([f.user_name(), f.password(), f.url()])
-    print(data)
+    data = [[f.user_name(), f.password(), f.url()] for _ in range(10)]
     table.insert_rows(data)
 
 
-if __name__ == "__main__":
+def main():
     root = customtkinter.CTk()
     root.title("CustomTkinter Table")
     root.geometry("450x400")
 
-    btn = customtkinter.CTkButton(root, text="Fake it", command=fakeit)
+    btn = customtkinter.CTkButton(root, text="Fake it", command=lambda: fakeit(table))
     btn.pack()
 
-    values = [
-        ['test_user0', 'test_pass0', 'test_url0'],
-        ['test_user1', 'test_pass1', 'test_url1']
-    ]
+    values = [[f'test_user {n}', f'test_pass {n}', f'test_url {n}']for n in range(3)]
 
     table = CTkTableView(root, values=values)
     table.pack(expand=True, fill='both')
 
     root.mainloop()
+
+
+if __name__ == "__main__":
+    main()
 
