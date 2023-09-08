@@ -9,7 +9,7 @@ class CTkTableView(ctk.CTkScrollableFrame):
         self.master = master
         self.headers = headers
         self.data = []
-        self.widths = [50, 50, 50]
+        self.widths = [150, 50, 200]
 
         for col, header in enumerate(self.headers):
             label = tk.Label(self, text=header)
