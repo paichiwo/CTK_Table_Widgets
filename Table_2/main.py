@@ -1,15 +1,15 @@
 import customtkinter
 from faker import Faker
-from ctktableview.my_tableview import CTkTableView
+from Table_2.ctk_tableview import CTkTableView
 
 
 def fakeit(table):
     f = Faker()
-    data = [[f.user_name(), f.password(), f.url()] for _ in range(10)]
+    data = [[f.user_name(), f.password(), f.url()] for _ in range(100)]
     table.insert_rows(data)
 
 
-def main():
+def table_2():
     root = customtkinter.CTk()
     root.title("CustomTkinter Table")
     root.geometry("450x400")
@@ -26,5 +26,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
-
+    table_2()

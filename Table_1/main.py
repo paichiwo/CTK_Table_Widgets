@@ -1,8 +1,9 @@
 import customtkinter
 from faker import Faker
-from ctktableview.CTkTableView import CTkTableView
+from Table_1.ctk_tableview import CTkTableView
 
-if __name__ == "__main__":
+
+def table_1():
     root = customtkinter.CTk()
     root.title("CustomTkinter Table")
     root.geometry("450x400")
@@ -22,3 +23,7 @@ if __name__ == "__main__":
     table.update_table(data)
 
     root.mainloop()
+
+
+if __name__ == "__main__":
+    table_1()

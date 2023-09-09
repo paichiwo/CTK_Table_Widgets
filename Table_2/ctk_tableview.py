@@ -35,17 +35,6 @@ class Frame(ctk.CTkFrame):
         self.password = password
         self.website = website
 
-        self.username_label = None
-        self.username_entry = None
-        self.password_label = None
-        self.password_entry = None
-        self.website_label = None
-        self.website_entry = None
-
-        self.gui()
-
-    def gui(self):
-
         self.columnconfigure(0, weight=1)
         self.columnconfigure(1, weight=1)
 
