@@ -11,7 +11,7 @@ def fakeit(table):
 
 def table_2():
     root = customtkinter.CTk()
-    root.title("CustomTkinter Table")
+    root.title("CustomTkinter Table 2")
     root.geometry("450x400")
 
     btn = customtkinter.CTkButton(root, text="Fake it", command=lambda: fakeit(table))

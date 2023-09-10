@@ -5,7 +5,7 @@ from Table_1.ctk_tableview import CTkTableView
 
 def table_1():
     root = customtkinter.CTk()
-    root.title("CustomTkinter Table")
+    root.title("CustomTkinter Table 1")
     root.geometry("450x400")
 
     headers = ["Name", "Age", "Email"]
