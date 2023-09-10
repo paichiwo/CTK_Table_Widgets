@@ -37,6 +37,7 @@ To run this project, you must have Python 3.x installed, along with the followin
 `pip install customtkinter`   
 `pip install faker` - to insert random data for demo purpose.
 
+alternatively: `pip install -r requirements.txt`
 
 ## Contributing
 
